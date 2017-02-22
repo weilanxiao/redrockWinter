@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="redrockWinter.ContentPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:redrockWinter"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:redrockWinter.RssFile"
+    mc:Ignorable="d">
+
+    <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Hidden">
+            <Grid Margin="10,0,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Name="title" Text="" TextWrapping="Wrap" FontSize="36"/>
+                <TextBlock Grid.Row="1" Name="link" Text="{Binding Link}" />
+                <TextBlock Grid.Row="2" Name="puDate" Text=""/>
+                <TextBlock Grid.Row="3" Name="description" Text="{Binding PubDate}" TextWrapping="Wrap"
+                           FontSize="18" LineHeight="32"/>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Page>
