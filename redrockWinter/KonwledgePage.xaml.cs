@@ -28,6 +28,7 @@ namespace redrockWinter
         public KonwledgePage()
         {
             this.InitializeComponent();
+            MainPage.Current.SearchBox.Text = konwledgeRss;
         }
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {

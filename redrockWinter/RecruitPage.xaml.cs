@@ -28,6 +28,7 @@ namespace redrockWinter
         public RecruitPage()
         {
             this.InitializeComponent();
+            MainPage.Current.SearchBox.Text = recruitRss;
         }
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {

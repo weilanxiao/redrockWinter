@@ -33,6 +33,7 @@ namespace redrockWinter
         public NewsPage()
         {
             this.InitializeComponent();
+            MainPage.Current.SearchBox.Text = newsRss;
         }
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {

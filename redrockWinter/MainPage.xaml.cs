@@ -1,4 +1,5 @@
-﻿using System;
+﻿using redrockWinter.RssFile;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -40,40 +41,40 @@ namespace redrockWinter
 
         private void IconsListBos_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (First.IsSelected)
+            if (First.IsSelected)//选择该项
             {
-                ReturnButton.Visibility = Visibility.Collapsed;
-                Homeframe.Navigate(typeof(HomePage));
-                MainText.Text = "首页";
+                ReturnButton.Visibility = Visibility.Collapsed;//设置可见性
+                Homeframe.Navigate(typeof(HomePage));//跳转到该页
+                //MainText.Text = "首页";
             }else if(Second.IsSelected)
             {
                 ReturnButton.Visibility = Visibility.Visible;
                 Homeframe.Navigate(typeof(DigestPage));
-                MainText.Text = "精华";
+                //MainText.Text = "精华";
             }
             else if (Third.IsSelected)
             {
                 ReturnButton.Visibility = Visibility.Visible;
                 Homeframe.Navigate(typeof(NewsPage));
-                MainText.Text = "新闻";
+                //MainText.Text = "新闻";
             }
             else if (Fourth.IsSelected)
             {
                 ReturnButton.Visibility = Visibility.Visible;
                 Homeframe.Navigate(typeof(KonwledgePage));
-                MainText.Text = "知识";
+                //MainText.Text = "知识";
             }
             else if (Fifth.IsSelected)
             {
                 ReturnButton.Visibility = Visibility.Visible;
                 Homeframe.Navigate(typeof(QuestionPage));
-                MainText.Text = "博问";
+                //MainText.Text = "博问";
             }
             else if (Sixth.IsSelected)
             {
                 ReturnButton.Visibility = Visibility.Visible;
                 Homeframe.Navigate(typeof(RecruitPage));
-                MainText.Text = "招聘";
+                //MainText.Text = "招聘";
             }
         }
 
@@ -84,6 +85,11 @@ namespace redrockWinter
                 Homeframe.GoBack();
                 First.IsSelected = true;
             }
+        }
+
+        private void SearchBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
+        {
+
         }
     }
 }

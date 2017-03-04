@@ -9,8 +9,8 @@
     mc:Ignorable="d">
 
     <Grid>
-        <ScrollViewer VerticalScrollBarVisibility="Hidden">
-            <Grid Margin="10,0,0,0">
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <Grid Margin="10,0,10,0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />

@@ -34,6 +34,7 @@ namespace redrockWinter
             link.Text ="链接: "+ rss.Link;
             puDate.Text ="时间: "+ rss.PubDate;
             description.Text = rss.Description;
+            MainPage.Current.SearchBox.Text = rss.Link;
             base.OnNavigatedTo(e);
         }
     }

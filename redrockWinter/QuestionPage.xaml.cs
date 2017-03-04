@@ -28,6 +28,7 @@ namespace redrockWinter
         public QuestionPage()
         {
             this.InitializeComponent();
+            MainPage.Current.SearchBox.Text = questionRss;
         }
 
         //protected override async void OnNavigatedTo(NavigationEventArgs e)

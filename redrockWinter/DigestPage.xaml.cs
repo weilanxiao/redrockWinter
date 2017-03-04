@@ -28,6 +28,7 @@ namespace redrockWinter
         public DigestPage()
         {
             this.InitializeComponent();
+            MainPage.Current.SearchBox.Text = digestRss;
         }
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
@@ -47,7 +48,7 @@ namespace redrockWinter
         private void DigestList_ItemClick(object sender, ItemClickEventArgs e)
         {
             var rss = (Rss)e.ClickedItem;
-            MainPage.Current.Homeframe.Navigate(typeof(ContentPage),rss);
+            MainPage.Current.Homeframe.Navigate(typeof(ContentPage),rss);//传入内容
         }
     }
 }
