@@ -28,9 +28,10 @@ namespace redrockWinter.HttpRequest
 
         public static async Task<string> DownloadRssString(string url)
         {
-            var httpClient = new HttpClient();
+            HttpClient httpClient = new HttpClient();
             var result = await httpClient.GetStringAsync(new Uri(url));
             return result;
+
         }
 
         public static  List<Rss> GetRequest(List<Rss> list, string x,string eOri)

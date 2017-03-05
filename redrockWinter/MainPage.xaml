@@ -44,7 +44,8 @@
             <Button Grid.Column="3" Name="SearchButton" 
                     FontFamily="Segoe MDL2 Assets"
                     FontSize="36"
-                    Content="&#xE094;"/>
+                    Content="&#xE094;"
+                    Click="SearchButton_Click"/>
             <!--<TextBlock Name="MainText" Text="" FontSize="36" RelativePanel.RightOf="ReturnButton"/>-->
         </Grid>
         <SplitView Grid.Row="1"

@@ -1,8 +1,10 @@
-﻿using System;
+﻿using redrockWinter.RssFile;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -22,10 +24,10 @@ namespace redrockWinter
     /// </summary>
     public sealed partial class HomePage : Page
     {
-
         public HomePage()
         {
             this.InitializeComponent();
+            MainPage.Current.SearchBox.Text = "请输入地址";
         }
     }
 }

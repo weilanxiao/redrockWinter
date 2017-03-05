@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -87,9 +88,9 @@ namespace redrockWinter
             }
         }
 
-        private void SearchBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
+        private void SearchButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Homeframe.Navigate(typeof(SearchPage));
         }
     }
 }
