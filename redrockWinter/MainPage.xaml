@@ -54,7 +54,7 @@
                    IsPaneOpen="False"
                    DisplayMode="CompactOverlay" 
                    OpenPaneLength="200"
-                   CompactPaneLength="56">
+                   CompactPaneLength="57">
             <SplitView.Pane>
                 <ListBox SelectionMode="Single" Name="IconsListBos" SelectionChanged="IconsListBos_SelectionChanged">
                     <ListBoxItem Name="First" x:FieldModifier="Public">
@@ -96,8 +96,8 @@
                 </ListBox>
             </SplitView.Pane>
             <Frame Grid.Column="1" Grid.Row="1" x:FieldModifier="Public" x:Name="Homeframe">
-                <ContentDialog Content="错误信息" HorizontalAlignment="Center" VerticalAlignment="Center">
-                </ContentDialog>
+                <!--<ContentDialog Content="错误信息" HorizontalAlignment="Center" VerticalAlignment="Center">
+                </ContentDialog>-->
             </Frame>
         </SplitView>
     </Grid>
