@@ -11,11 +11,13 @@
         <ScrollViewer VerticalScrollBarVisibility="Hidden">
             <StackPanel>
                 <TextBlock Text="RSS博客园阅读器" FontSize="36" Margin="40,0,0,0"/>
-                <TextBlock Text="只能阅读博客园当天文章" FontSize="24" TextWrapping="Wrap" Margin="10"/>
+                <TextBlock Text="只能阅读博客园最新文章，或者一些网址内容(少量)" FontSize="24" TextWrapping="Wrap" Margin="10"/>
                 <TextBlock Text="博客园首页无法阅读，博问专区网址问题无法访问" FontSize="24" TextWrapping="Wrap" Margin="10"/>
-                <TextBlock Text="汉堡菜单下的content页面不能充满屏幕，排版不好见谅" FontSize="24" TextWrapping="Wrap" Margin="10"/>
-                <TextBlock Text="list列表只在切换时刷新，无法做到定时更新" FontSize="24"  TextWrapping="Wrap" Margin="10"/>
-                <TextBlock Text="list列表制作不完整，页面跳转动画不会" FontSize="24"  TextWrapping="Wrap" Margin="10"/>
+                <TextBlock Text="list列表进入详细页缓存" FontSize="24" TextWrapping="Wrap" Margin="10"/>
+                <TextBlock Text="list列表切换时刷新，无法做到定时更新" FontSize="24"  TextWrapping="Wrap" Margin="10"/>
+                <TextBlock Text="list列表切换时缓存无法释放" FontSize="24"  TextWrapping="Wrap" Margin="10"/>
+                <TextBlock Text="文章内容的整理有没有简单处理方法" FontSize="24"  TextWrapping="Wrap" Margin="10"/>
+                <TextBlock Text="网络请求不会try-catch，搜索不能乱用" FontSize="24"  TextWrapping="Wrap" Margin="10"/>
                 <TextBlock Text="在此感谢秦学长们的知识援助，请大佬多给点分" FontSize="24"  TextWrapping="Wrap" Margin="10"/>
                 <TextBlock Text="————By 魏蓝骁(萌新 宫子)" FontSize="20" HorizontalAlignment="Right"  Foreground="DarkSlateBlue" Margin="0,0,20,0"/>
             </StackPanel>

@@ -28,12 +28,17 @@ namespace redrockWinter
         public RecruitPage()
         {
             this.InitializeComponent();
-            MainPage.Current.SearchBox.Text = recruitRss;
+            NavigationCacheMode = NavigationCacheMode.Enabled;
         }
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            await GetList(recruitRss);
+            MainPage.Current.Sixth.IsSelected = true;
+            MainPage.Current.SearchBox.Text = recruitRss;
+            if (MainPage.Current.IoN == true)
+            {
+                await GetList(recruitRss);
+            }
         }
         public async Task GetList(string rssurl)
         {
@@ -47,6 +52,7 @@ namespace redrockWinter
 
         private void RecruitList_ItemClick(object sender, ItemClickEventArgs e)
         {
+            MainPage.Current.IoN = false;
             var rss = (Rss)e.ClickedItem;
             MainPage.Current.Homeframe.Navigate(typeof(ContentPage), rss);
         }

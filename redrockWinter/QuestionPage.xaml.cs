@@ -28,14 +28,17 @@ namespace redrockWinter
         public QuestionPage()
         {
             this.InitializeComponent();
-            MainPage.Current.SearchBox.Text = questionRss;
+            NavigationCacheMode = NavigationCacheMode.Enabled;
         }
 
         //protected override async void OnNavigatedTo(NavigationEventArgs e)
         //{
         //    base.OnNavigatedTo(e);
+        //    MainPage.Current.Fifth.IsSelected = true;
+        //    MainPage.Current.SearchBox.Text = questionRss;
         //    await GetList(questionRss);
         //}
+
         public async Task GetList(string rssurl)
         {
             string x = await HttpRequest.HttpRequest.DownloadRssString(rssurl);
@@ -48,6 +51,7 @@ namespace redrockWinter
 
         private void QuestionList_ItemClick(object sender, ItemClickEventArgs e)
         {
+            MainPage.Current.IoN = false;
             var rss = (Rss)e.ClickedItem;
             MainPage.Current.Homeframe.Navigate(typeof(ContentPage), rss);
         }

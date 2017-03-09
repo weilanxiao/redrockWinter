@@ -28,12 +28,17 @@ namespace redrockWinter
         public KonwledgePage()
         {
             this.InitializeComponent();
-            MainPage.Current.SearchBox.Text = konwledgeRss;
+            NavigationCacheMode = NavigationCacheMode.Enabled;
         }
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            await GetList(konwledgeRss);
+            MainPage.Current.Fourth.IsSelected = true;
+            MainPage.Current.SearchBox.Text = konwledgeRss;
+            if (MainPage.Current.IoN == true)
+            {
+                await GetList(konwledgeRss);
+            }
         }
         public async Task GetList(string rssurl)
         {
@@ -47,6 +52,7 @@ namespace redrockWinter
 
         private void KnowledgeList_ItemClick(object sender, ItemClickEventArgs e)
         {
+            MainPage.Current.IoN = false;
             var rss = (Rss)e.ClickedItem;
             MainPage.Current.Homeframe.Navigate(typeof(ContentPage), rss);
         }

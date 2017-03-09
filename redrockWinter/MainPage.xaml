@@ -33,7 +33,8 @@
                     FontFamily="Segoe MDL2 Assets"
                     FontSize="36"
                     Content="&#xE0C4;" 
-                    Click="ReturnButton_Click"/>
+                    Click="ReturnButton_Click"
+                    x:FieldModifier="Public"/>
             <TextBox Grid.Column="2" 
                      x:FieldModifier="Public"
                      Name="SearchBox" Width="auto"
@@ -56,37 +57,37 @@
                    CompactPaneLength="56">
             <SplitView.Pane>
                 <ListBox SelectionMode="Single" Name="IconsListBos" SelectionChanged="IconsListBos_SelectionChanged">
-                    <ListBoxItem Name="First">
+                    <ListBoxItem Name="First" x:FieldModifier="Public">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE10F;"/>
                             <TextBlock Text="首页" FontSize="24" Margin="20,0,0,0"/>
                         </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem Name="Second">
+                    <ListBoxItem Name="Second" x:FieldModifier="Public">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xEB95;"/>
                             <TextBlock Text="精华" FontSize="24" Margin="20,0,0,0"/>
                         </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem Name="Third">
+                    <ListBoxItem Name="Third" x:FieldModifier="Public">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xEC42;"/>
                             <TextBlock Text="新闻" FontSize="24" Margin="20,0,0,0"/>
                         </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem Name="Fourth">
+                    <ListBoxItem Name="Fourth" x:FieldModifier="Public">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE82E;"/>
                             <TextBlock Text="知识" FontSize="24" Margin="20,0,0,0"/>
                         </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem Name="Fifth">
+                    <ListBoxItem Name="Fifth" x:FieldModifier="Public">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xEE57;"/>
                             <TextBlock Text="博问" FontSize="24" Margin="20,0,0,0"/>
                         </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem Name="Sixth">
+                    <ListBoxItem Name="Sixth" x:FieldModifier="Public">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE8B8;"/>
                             <TextBlock Text="招聘" FontSize="24" Margin="20,0,0,0"/>
@@ -94,7 +95,10 @@
                     </ListBoxItem>
                 </ListBox>
             </SplitView.Pane>
-            <Frame Grid.Column="1" Grid.Row="1" x:FieldModifier="Public" x:Name="Homeframe"/>
+            <Frame Grid.Column="1" Grid.Row="1" x:FieldModifier="Public" x:Name="Homeframe">
+                <ContentDialog Content="错误信息" HorizontalAlignment="Center" VerticalAlignment="Center">
+                </ContentDialog>
+            </Frame>
         </SplitView>
     </Grid>
 </Page>

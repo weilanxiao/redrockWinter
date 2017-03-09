@@ -28,6 +28,7 @@ namespace redrockWinter
         {
             this.InitializeComponent();
             MainPage.Current.SearchBox.Text = "请输入地址";
+            MainPage.Current.First.IsSelected = true;
         }
     }
 }

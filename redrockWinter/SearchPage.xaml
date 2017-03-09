@@ -11,7 +11,7 @@
     <Grid>
         <ListView x:Name="OtherList"
                   IsItemClickEnabled="True"
-                  ItemClick="DigestList_ItemClick"
+                  ItemClick="OtherList_ItemClick"
                   HorizontalContentAlignment="Stretch">
             <ListView.ItemTemplate>
                 <DataTemplate>

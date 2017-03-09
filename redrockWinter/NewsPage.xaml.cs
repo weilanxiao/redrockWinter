@@ -33,12 +33,17 @@ namespace redrockWinter
         public NewsPage()
         {
             this.InitializeComponent();
-            MainPage.Current.SearchBox.Text = newsRss;
+            NavigationCacheMode = NavigationCacheMode.Enabled;
         }
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            await GetList(newsRss);
+            MainPage.Current.Third.IsSelected = true;
+            MainPage.Current.SearchBox.Text = newsRss;
+            if (MainPage.Current.IoN == true)
+            {
+                await GetList(newsRss);
+            }
         }
         public async Task GetList(string rssurl)
         {
@@ -52,6 +57,7 @@ namespace redrockWinter
 
         private void NewsList_ItemClick(object sender, ItemClickEventArgs e)
         {
+            MainPage.Current.IoN = false;
             var rss = (Rss)e.ClickedItem;
             MainPage.Current.Homeframe.Navigate(typeof(ContentPage),rss);
         }

@@ -28,10 +28,15 @@ namespace redrockWinter
         {
             this.InitializeComponent();
         }
+
         protected override async void OnNavigatedTo(NavigationEventArgs e)
-        {
+        { 
             base.OnNavigatedTo(e);
-            await GetList(MainPage.Current.SearchBox.Text);
+            //MainPage.Current.ReturnButton.Visibility = Visibility.Visible;            
+            if (MainPage.Current.IoN == true)
+            {
+                await GetList(MainPage.Current.SearchBox.Text);
+            }
         }
 
         public async Task GetList(string rssurl)
@@ -43,8 +48,10 @@ namespace redrockWinter
             list = HttpRequest.HttpRequest.GetRequest(list, x, eOri);
             OtherList.ItemsSource = list;
         }
-        private void DigestList_ItemClick(object sender, ItemClickEventArgs e)
+
+        private void OtherList_ItemClick(object sender, ItemClickEventArgs e)
         {
+            MainPage.Current.IoN = false;
             var rss = (Rss)e.ClickedItem;
             MainPage.Current.Homeframe.Navigate(typeof(ContentPage), rss);//传入内容
         }

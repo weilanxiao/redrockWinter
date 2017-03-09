@@ -25,6 +25,7 @@ namespace redrockWinter
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public bool IoN = true;
         public static MainPage Current;
         public MainPage()
         {
@@ -42,9 +43,10 @@ namespace redrockWinter
 
         private void IconsListBos_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            IoN = true;
             if (First.IsSelected)//选择该项
             {
-                ReturnButton.Visibility = Visibility.Collapsed;//设置可见性
+                ReturnButton.Visibility = Visibility.Visible;//设置可见性
                 Homeframe.Navigate(typeof(HomePage));//跳转到该页
                 //MainText.Text = "首页";
             }else if(Second.IsSelected)
@@ -84,7 +86,6 @@ namespace redrockWinter
             if (Homeframe.CanGoBack)
             {
                 Homeframe.GoBack();
-                First.IsSelected = true;
             }
         }
 

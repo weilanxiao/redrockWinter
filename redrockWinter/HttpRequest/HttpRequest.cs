@@ -31,7 +31,6 @@ namespace redrockWinter.HttpRequest
             HttpClient httpClient = new HttpClient();
             var result = await httpClient.GetStringAsync(new Uri(url));
             return result;
-
         }
 
         public static  List<Rss> GetRequest(List<Rss> list, string x,string eOri)

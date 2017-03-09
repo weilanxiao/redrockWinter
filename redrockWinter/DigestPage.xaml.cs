@@ -28,12 +28,17 @@ namespace redrockWinter
         public DigestPage()
         {
             this.InitializeComponent();
-            MainPage.Current.SearchBox.Text = digestRss;
+            NavigationCacheMode = NavigationCacheMode.Enabled;
         }
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            await GetList(digestRss);
+            MainPage.Current.Second.IsSelected = true;
+            MainPage.Current.SearchBox.Text = digestRss;
+            if (MainPage.Current.IoN == true)
+            {
+                await GetList(digestRss);
+            }
         }
         public async Task GetList(string rssurl)
         {
@@ -47,6 +52,7 @@ namespace redrockWinter
 
         private void DigestList_ItemClick(object sender, ItemClickEventArgs e)
         {
+            MainPage.Current.IoN = false;
             var rss = (Rss)e.ClickedItem;
             MainPage.Current.Homeframe.Navigate(typeof(ContentPage),rss);//传入内容
         }
