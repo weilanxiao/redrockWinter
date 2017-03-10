@@ -91,7 +91,10 @@ namespace redrockWinter
 
         private void SearchButton_Click(object sender, RoutedEventArgs e)
         {
-            Homeframe.Navigate(typeof(SearchPage));
+            if (SearchBox.Text == null || SearchBox.Text == "请输入网址")
+            {
+                Homeframe.Navigate(typeof(SearchPage));
+            }
         }
     }
 }
