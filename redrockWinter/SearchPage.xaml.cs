@@ -32,7 +32,7 @@ namespace redrockWinter
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         { 
             base.OnNavigatedTo(e);
-            //MainPage.Current.ReturnButton.Visibility = Visibility.Visible;            
+            MainPage.Current.ReturnButton.Visibility = Visibility.Visible;
             if (MainPage.Current.IoN == true)
             {
                 await GetList(MainPage.Current.SearchBox.Text);
